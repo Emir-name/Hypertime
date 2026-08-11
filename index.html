@@ -133,6 +133,7 @@
         .ip-value {
             font-family: 'Press Start 2P', cursive;
             font-size: 0.9rem; color: var(--accent);
+            word-break: break-all;
         }
         .copy-icon {
             width: 20px; height: 20px; opacity: 0.6;
@@ -345,6 +346,25 @@
             .hero h1 { font-size: 1.5rem; }
             .section-header h2 { font-size: 1.1rem; }
             .rules-category-header h3 { font-size: 0.7rem; }
+            .ip-box {
+                width: 100%;
+                max-width: 100%;
+                padding: 0.8rem 1.2rem;
+                justify-content: space-between;
+            }
+            .ip-value {
+                font-size: 0.75rem !important;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+            }
         }
 
         ::-webkit-scrollbar { width: 8px; }
@@ -371,15 +391,23 @@
         <h1>HYPERTIME</h1>
         <p class="hero-subtitle">Погрузись в уникальный мир Minecraft с кастомными механиками, дружелюбным комьюнити и бесконечными приключениями!</p>
 
-        <div class="ip-box" onclick="copyIP()">
-            <div>
-                <div class="ip-label">IP сервера</div>
-                <div class="ip-value">mc.hypertime.fun</div>
+                <div class="ip-box" onclick="copyIP()">
+            <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+                <div>
+                    <div class="ip-label">IP сервера</div>
+                    <div class="ip-value">mc.hypertime.fun</div>
+                </div>
+                <div style="border-top: 1px solid var(--border); padding-top: 0.3rem; margin-top: 0.1rem;">
+                    <div class="ip-label">Версия Minecraft</div>
+                    <div class="ip-value" style="font-size: 0.8rem;">1.21 — 1.21.11</div>
+                </div>
             </div>
             <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
             </svg>
+        </div>
+
         <div class="hero-buttons">
             <a href="https://hypertimee.trademc.org/" class="btn btn-primary" target="_blank">
                 <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
